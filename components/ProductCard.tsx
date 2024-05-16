@@ -18,7 +18,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     <div className="flex flex-col pr-8">
       <Link href={"/menu/products/" + product.id}>
         <Image
-          className="max-w-[800] self-center object-cover rounded"
+          className="max-w-[800] self-center object-cover rounded-md"
           src={product.imageUrl}
           alt={product.name}
           height={192}

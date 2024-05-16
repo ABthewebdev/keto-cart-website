@@ -21,7 +21,7 @@ export default async function Menu() {
       <section className="flex flex-col items-center pt-4 md:flex-row md:justify-center">
         <Image
           priority
-          className="px-3 object-cover rounded"
+          className="px-3 object-cover rounded-md"
           src={products[0].imageUrl}
           alt={products[0].name}
           height={256}

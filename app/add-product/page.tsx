@@ -28,10 +28,33 @@ export default function AddProductPage() {
   return (
     <div className="px-3">
       <form action={addProduct}>
-        <Input required name="name" placeholder="Name" />
-        <Input required name="rating" type="number" placeholder="Rating" />
-        <Input required name="imageUrl" type="url" placeholder="Image Url" />
-        <Input required name="price" type="number" placeholder="Price" />
+        <Input
+          className="border-black border"
+          required
+          name="name"
+          placeholder="Name"
+        />
+        <Input
+          className="border-black border"
+          required
+          name="rating"
+          type="number"
+          placeholder="Rating"
+        />
+        <Input
+          className="border-black border"
+          required
+          name="imageUrl"
+          type="url"
+          placeholder="Image Url"
+        />
+        <Input
+          className="border-black border"
+          required
+          name="price"
+          type="number"
+          placeholder="Price"
+        />
         <FormSubmitButton type="submit">Submit Product</FormSubmitButton>
       </form>
     </div>

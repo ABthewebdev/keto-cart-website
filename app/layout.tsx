@@ -1,8 +1,10 @@
 import { ClerkProvider } from "@clerk/nextjs";
-import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import UserAuth from "@/components/UserAuth";
+import "./globals.css";
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
 
 export const Metadata = {
   title: "Keto Cart",
@@ -17,7 +19,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className="min-w-[400px]">
+        <body className={inter.className}>
           <div className="text-center px-8 md:px-16 lg:px-20">
             <h2 className="font-bold text-base">
               Start your 3 month free trial

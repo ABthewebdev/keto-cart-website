@@ -28,7 +28,7 @@ export default async function Nav({ AuthButton }: any) {
         <div className="flex-grow-2 md:flex-1">
           <form className="flex" action={searchProducts}>
             <Input
-              className="md:w-72"
+              className="md:w-72 border border-black"
               name="searchQuery"
               placeholder="Search"
               type="search"
@@ -39,7 +39,7 @@ export default async function Nav({ AuthButton }: any) {
           className="hover:opacity-70 hidden md:flex justify-center"
           href="/"
         >
-          <span className="text-2xl lusitana-bold">Keto Cart</span>
+          <span className="text-xl lusitana-bold">Keto Cart</span>
         </Link>
         <div className="flex flex-1 justify-end">{AuthButton}</div>
       </div>

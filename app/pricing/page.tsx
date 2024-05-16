@@ -129,7 +129,7 @@ export default function Pricing() {
                             <Image
                               className="flex-shrink-0 text-green-500"
                               aria-hidden="true"
-                              src="/myCheckIcon"
+                              src="/myCheckIcon.svg"
                               alt="check icon"
                               height={24}
                               width={24}
@@ -181,7 +181,7 @@ export default function Pricing() {
                               <Image
                                 className="flex-shrink-0 text-green-500"
                                 aria-hidden="true"
-                                src="/myCheckIcon"
+                                src="/myCheckIcon.svg"
                                 alt="check icon"
                                 height={24}
                                 width={24}
