@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { JSX, SVGProps } from "react";
 
 const navigation = {
@@ -105,6 +106,12 @@ export default function Footer() {
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
           2024 Keto Cart LLC
+        </p>
+        <p className="mt-5 text-center text-xs leading-5 text-gray-500">
+          Images courtesy of{" "}
+          <Link className="hover:underline" href="https://unsplash.com/">
+            Unsplash
+          </Link>
         </p>
       </div>
     </footer>
