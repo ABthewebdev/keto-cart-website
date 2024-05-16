@@ -11,6 +11,7 @@ import ProductCard from "@/components/ProductCard";
 import Link from "next/link";
 import PriceTag from "@/components/PriceTag";
 import Image from "next/image";
+import PaginationBar from "@/components/PaginationBar";
 
 export default async function Menu() {
   const products = await prisma.product.findMany({
@@ -20,8 +21,7 @@ export default async function Menu() {
     <div className="sm:px-8 bg-white rounded">
       <section className="flex flex-col items-center pt-4 md:flex-row md:justify-center">
         <Image
-          priority
-          className="px-3 object-cover rounded-md"
+          className="px-3 object-cover rounded-lg"
           src={products[0].imageUrl}
           alt={products[0].name}
           height={256}
@@ -61,12 +61,13 @@ export default async function Menu() {
             </form>
           </div>
         </div>
-        <div className="my-3 grid grid-cols-1 items-center md:grid-cols-2 xl:grid-cols-3">
+        <div className="my-3 gap-y-2 flex flex-wrap items-center justify-center">
           {products.slice(1).map((product) => (
             <ProductCard product={product} key={product.id} />
           ))}
         </div>
       </section>
+      <PaginationBar currentPage={5} totalPages={99} />
     </div>
   );
 }

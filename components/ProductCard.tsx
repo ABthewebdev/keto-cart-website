@@ -16,7 +16,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     1000 * 60 * 60 * 24 * 7;
   return (
     <div className="flex flex-col pr-8">
-      <Link href={"/menu/products/" + product.id}>
+      <Link className="text-center" href={"/menu/products/" + product.id}>
         <Image
           className="max-w-[800] self-center object-cover rounded-md"
           src={product.imageUrl}
@@ -33,19 +33,21 @@ export default function ProductCard({ product }: ProductCardProps) {
               </div>
             )}
           </h2>
-          <div className="flex items-center gap-0.5">
+          <div className="flex items-center gap-x-1">
+            <>
+              <span className="font-medium text-lg">{product.rating}</span>
+              <StarIcon className="size-5 fill-yellow-300" />
+            </>
             <PriceTag className="font-medium text-lg" price={product.price} />
-          </div>
-          <div className="flex">
-            <span className="font-medium text-lg">{product.rating}</span>
-            <StarIcon className="size-5 fill-yellow-300" />
           </div>
         </div>
       </Link>
-      <AddToBoxButton
-        productId={product.id}
-        incrementProductQuantity={incrementProductQuantity}
-      />
+      <div className="self-center">
+        <AddToBoxButton
+          productId={product.id}
+          incrementProductQuantity={incrementProductQuantity}
+        />
+      </div>
     </div>
   );
 }
