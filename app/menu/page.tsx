@@ -18,10 +18,10 @@ export default async function Menu() {
     orderBy: { id: "desc" },
   });
   return (
-    <div className="sm:px-8 bg-white rounded">
-      <section className="flex flex-col items-center pt-4 md:flex-row md:justify-center">
+    <div className="sm:px-8 bg-white">
+      <section className="flex flex-col items-center pt-4 md:gap-x-5 md:flex-row md:justify-center">
         <Image
-          className="px-3 object-cover rounded-lg"
+          className="object-cover rounded-lg"
           src={products[0].imageUrl}
           alt={products[0].name}
           height={256}
@@ -61,7 +61,7 @@ export default async function Menu() {
             </form>
           </div>
         </div>
-        <div className="my-3 gap-y-2 flex flex-wrap items-center justify-center">
+        <div className="my-3 grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {products.slice(1).map((product) => (
             <ProductCard product={product} key={product.id} />
           ))}

@@ -8,11 +8,12 @@ datasource db {
 }
 
 model Product {
-  id        String     @id @default(auto()) @map("_id") @db.ObjectId
-  imageUrl  String
-  name      String
-  price     Int
-  rating    Int
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  imageUrl String
+  name     String
+  price    Int
+  rating   Int
+
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
   CartItem  CartItem[]

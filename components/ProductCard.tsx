@@ -15,31 +15,27 @@ export default function ProductCard({ product }: ProductCardProps) {
     Date.now() - new Date(product.createdAt).getTime() <
     1000 * 60 * 60 * 24 * 7;
   return (
-    <div className="flex flex-col pr-8">
+    <div className="flex flex-col mb-5">
       <Link className="text-center" href={"/menu/products/" + product.id}>
         <Image
-          className="max-w-[800] self-center object-cover rounded-md"
+          className="rounded-lg"
           src={product.imageUrl}
           alt={product.name}
-          height={192}
-          width={192}
+          height={250}
+          width={250}
         />
-        <div className="flex flex-1 flex-col p-8">
-          <h2 className="flex text-lg font-medium">
-            {product.name}
-            {isNew && (
-              <div className="flex justify-center text-base ml-2 items-center rounded-2xl p-1 bg-yellow-300">
-                NEW
-              </div>
-            )}
-          </h2>
-          <div className="flex items-center gap-x-1">
-            <>
-              <span className="font-medium text-lg">{product.rating}</span>
-              <StarIcon className="size-5 fill-yellow-300" />
-            </>
-            <PriceTag className="font-medium text-lg" price={product.price} />
+        <div className="flex flex-1 flex-col p-8 items-center">
+          <h2 className="flex text-md font-medium">{product.name}</h2>
+          {isNew && (
+            <div className="text-center w-14 text-sm font-medium h-7 rounded-2xl p-1 bg-yellow-300">
+              NEW
+            </div>
+          )}
+          <div className="flex items-center justify-center gap-x-1">
+            <span className="font-medium text-lg">{product.rating}</span>
+            <StarIcon className="size-5 fill-yellow-300" />
           </div>
+          <PriceTag className="font-medium text-lg" price={product.price} />
         </div>
       </Link>
       <div className="self-center">

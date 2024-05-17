@@ -13,6 +13,7 @@ async function addProduct(formData: FormData) {
   const name = formData.get("name")?.toString();
   const rating = Number(formData.get("rating") || 0);
   const imageUrl = formData.get("imageUrl")?.toString();
+  // const nutriFactsUrl = formData.get("nutriFactsUrl")?.toString();
   const price = Number(formData.get("price") || 0);
 
   if (!name || !rating || !imageUrl || !price) {
