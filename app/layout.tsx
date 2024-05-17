@@ -24,7 +24,7 @@ export default function RootLayout({
           <h2 className="font-bold text-base">Start your 3 month free trial</h2>
         </div>
         <div className="flex">
-          <Nav AuthButton={<span>Clerk Auth</span>} />
+          <Nav AuthButton={<UserAuth />} />
         </div>
         {children}
         <Footer />
