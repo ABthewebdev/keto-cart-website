@@ -7,13 +7,15 @@ import { StarIcon } from "lucide-react";
 const recipesData = [
   {
     id: 1,
-    imageUrl: "/omelette.jpg",
-    name: "Jalapeno Omelette",
+    imageUrl:
+      "https://images.unsplash.com/photo-1494597706938-de2cd7341979?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b21lbGV0dGV8ZW58MHx8MHx8fDA%3D",
+    name: "Spinach Omelette",
   },
   {
     id: 2,
-    imageUrl: "/waffles.webp",
-    name: "5 minute waffles",
+    imageUrl:
+      "https://plus.unsplash.com/premium_photo-1675279010961-8a6679ff03da?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvdGVpbiUyMGljZSUyMGNyZWFtfGVufDB8fDB8fHww",
+    name: "Protein Ice Cream",
   },
 ];
 
@@ -40,7 +42,7 @@ export default function recipesPage() {
           <Link href="/" key={recipe.id}>
             <article className="text-base font-medium">
               <Image
-                className="w-56 h-56"
+                className="size-56"
                 src={recipe.imageUrl}
                 alt={recipe.name}
                 width={220}
@@ -48,11 +50,11 @@ export default function recipesPage() {
               />
               <h2>{recipe.name}</h2>
               <div className="flex">
-                <StarIcon className="w-4 h-4 fill-yellow-300" />
-                <StarIcon className="w-4 h-4 fill-yellow-300" />
-                <StarIcon className="w-4 h-4 fill-yellow-300" />
-                <StarIcon className="w-4 h-4 fill-yellow-300" />
-                <StarIcon className="w-4 h-4 fill-yellow-300" />
+                <StarIcon className="size-4 fill-yellow-300" />
+                <StarIcon className="size-4 fill-yellow-300" />
+                <StarIcon className="size-4 fill-yellow-300" />
+                <StarIcon className="size-4 fill-yellow-300" />
+                <StarIcon className="size-4 fill-yellow-300" />
               </div>
             </article>
           </Link>
