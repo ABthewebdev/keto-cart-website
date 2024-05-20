@@ -17,19 +17,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // <ClerkProvider>
-    <html lang="en">
-      <body className={inter.className}>
-        <div className="text-center px-8 md:px-16 lg:px-20">
-          <h2 className="font-bold text-base">Start your 3 month free trial</h2>
-        </div>
-        <div className="flex">
-          <Nav AuthButton={<UserAuth />} />
-        </div>
-        {children}
-        <Footer />
-      </body>
-    </html>
-    // </ClerkProvider>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <div className="text-center px-8 md:px-16 lg:px-20">
+            <h2 className="font-bold text-base">
+              Start your 3 month free trial
+            </h2>
+          </div>
+          <div className="flex">
+            <Nav AuthButton={<UserAuth />} />
+          </div>
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

@@ -22,7 +22,7 @@ async function addProduct(formData: FormData) {
   await prisma.product.create({
     data: { name, rating, imageUrl, price },
   });
-  redirect("/");
+  // redirect("/");
 }
 
 export default function AddProductPage() {
