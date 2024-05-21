@@ -37,7 +37,7 @@ export default async function Nav({ AuthButton }: any) {
           </form>
         </div>
         <Link
-          className="hover:opacity-70 hidden md:flex justify-center"
+          className="hover:opacity-70 hidden md:flex justify-center mr-5"
           href="/"
         >
           <span className="text-xl lusitana-bold">Keto Cart</span>
